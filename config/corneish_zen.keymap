@@ -19,11 +19,11 @@
 #define MEDIA 1
 #define NAV   2
 #define SYM   3
-#define BTN_R 4
+#define BTN_L 4
 #define NUM   5
 #define FUNC  6
 #define CFG   7
-#define BTN_L 8
+#define BTN_R 8
 
 / {
 	behaviors {
@@ -64,11 +64,11 @@
 	keymap {
 		compatible = "zmk,keymap";
 
-		// ------------------------------------------------------------------
-		// |  Q  |  W  |  F  |  P  |  B  |---|  J  |  L   |  U  |  Y  |  ;  |
-		// |  A  |  R  |  S  |  T  |  G  |---|  M  |  N   |  E  |  I  |  O  |
-		// |  Z  |  X  |  C  |  D  |  V  |---|  K  |  H   |  ,  |  .  |  /  |
-		//             |  '  | Bksp| Tab |---| Spc | Ent  | Esc |
+		// # ------------------------------------------------------------------
+		// # |  Q  |  W  |  F  |  P  |  B  |---|  J  |  L   |  U  |  Y  |  ;  |
+		// # |  A  |  R  |  S  |  T  |  G  |---|  M  |  N   |  E  |  I  |  O  |
+		// # |  Z  |  X  |  C  |  D  |  V  |---|  K  |  H   |  ,  |  .  |  /  |
+		// #             |  '  | Bksp| Tab |---| Spc | Ent  | Esc |
 		default_layer {
 			label = "Base";
 			bindings = <
@@ -79,11 +79,11 @@
             >;
     	};
 
-		// -----------------------------------------------------------------
-		// |     |     |     |     |     |---|     |     |     |     |     |
-		// |LGui |LAlt |LCtrl|LShft|     |---|     | Prev|VolDn|VolUp| Next|
-		// |     |     |     |     |     |---|     |     |     |     |     |
-		//             |xxxxx|     |     |---| Stop| Play| Mute|
+		// # -----------------------------------------------------------------
+		// # |     |     |     |     |     |---|     |     |     |     |     |
+		// # |LGui |LAlt |LCtrl|LShft|     |---|     | Prev|VolDn|VolUp| Next|
+		// # |     |     |     |     |     |---|     |     |     |     |     |
+		// #             |xxxxx|     |     |---| Stop| Play| Mute|
 		media_layer {
 			label = "Media";
 			bindings = <
@@ -94,11 +94,11 @@
             >;
         };
 
-		// -----------------------------------------------------------------
-		// |MScD |MseM |MseR |MseL |MScU |---|Scrlk| MScL| MScD| MScU| MScR|
-		// |LGui |LAlt |LCtrl|LShft|NewTb|---| Caps| Lft | Dwn |  Up | Rgt |
-		// |     | Ent |CtShC|CtShV|     |---|Insrt| Home| PgDn| PgUp| End |
-		//             |     |xxxxx|     |---| Trns| Bksp| Del |
+		// # -----------------------------------------------------------------
+		// # |MScD |MseM |MseR |MseL |MScU |---|Scrlk| MScL| MScD| MScU| MScR|
+		// # |LGui |LAlt |LCtrl|LShft|NewTb|---| Caps| Lft | Dwn |  Up | Rgt |
+		// # |     | Ent |CtShC|CtShV|     |---|Insrt| Home| PgDn| PgUp| End |
+		// #             |     |xxxxx|     |---| Trns| Bksp| Del |
 		// Holding this here when mouse emulation is merged: https://github.com/zmkfirmware/zmk/pull/778
 		//		&mwh SCROLL_DOWN &mkp MCLK &mkp RCLK     &mkp LCLK     &mwh SCROLL_UP   &kp SLCK &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP &mwh SCROLL_RIGHT
 		// Don't forget to add back &new_tab where NewTb
@@ -112,11 +112,11 @@
             >;
         };
 
-		// -----------------------------------------------------------------
-		// |  !  |  @  |  #  |  $  |  %  |---|  ^  |  &  |  *  |  (  |  )  |
-		// |LGui |LAlt |LCtrl|LShft|  |  |---|  "  |  -  |  =  |  [  |  ]  |
-		// |     |     |     |     |  ~  |---|  '  |  _  |  +  |  {  |  }  |
-		//             |     |     |xxxxx|---| Trns|  `  |  \  |
+		// # -----------------------------------------------------------------
+		// # |  !  |  @  |  #  |  $  |  %  |---|  ^  |  &  |  *  |  (  |  )  |
+		// # |LGui |LAlt |LCtrl|LShft|  |  |---|  "  |  -  |  =  |  [  |  ]  |
+		// # |     |     |     |     |  ~  |---|  '  |  _  |  +  |  {  |  }  |
+		// #             |     |     |xxxxx|---| Trns|  `  |  \  |
 		symbol_layer {
 			label = "Symbol";
 			bindings = <
@@ -127,28 +127,28 @@
             >;
         };
 
-		// -----------------------------------------------------------------
-		// |Undo | Cut |Copy |Paste|Redo |---|  *  |  7  |  8  |  9  |  /  |
-		// |LGui |RAlt |LCtrl|LShft|NumLk|---|  =  |  4  |  5  |  6  |  -  |
-		// |xxxxx| Cut |Copy |Paste|Redo |---| Ent |  1  |  2  |  3  |  +  |
-		//             |MseM |MseR |MseL |---| Trns|  0  |  .  |
+		// # -----------------------------------------------------------------
+		// # |Undo | Cut |Copy |Paste|Redo |---|  *  |  7  |  8  |  9  |  /  |
+		// # |LGui |RAlt |LCtrl|LShft|NumLk|---|  =  |  4  |  5  |  6  |  -  |
+		// # |xxxxx| Cut |Copy |Paste|Redo |---| Ent |  1  |  2  |  3  |  +  |
+		// #             |MseM |MseR |MseL |---| Trns|  0  |  .  |
 		// Holding this here when mouse emulation is merged: https://github.com/zmkfirmware/zmk/pull/778
 		//						           &mkp MCLK     &mkp RCLK      &mkp LCLK       &trans    &kp N0 &kp DOT
 		button_left_layer {
 			label = "Button";
 			bindings = <
-				&kp C_AC_UNDO &kp C_AC_CUT &kp C_AC_COPY &kp C_AC_PASTE &kp C_AC_REDO   &kp ASTRK &kp N7 &kp N8 &kp N9 &kp FSLH
-				&kp LGUI      &kp LALT     &kp LCTRL     &kp LSHIFT     &kp KP_NUM      &kp EQUAL &kp N4 &kp N5 &kp N6 &kp MINUS
-				&trans        &kp C_AC_CUT &kp C_AC_COPY &kp C_AC_PASTE &kp C_AC_REDO   &kp RET   &kp N1 &kp N2 &kp N3 &kp PLUS
-								           &trans        &trans         &trans          &trans    &kp N0 &kp DOT
+				&kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_REDO   &kp ASTRK &kp N7 &kp N8 &kp N9 &kp FSLH
+				&kp LGUI   &kp LALT  &kp LCTRL  &kp LSHIFT  &kp KP_NUM   &kp EQUAL &kp N4 &kp N5 &kp N6 &kp MINUS
+				&trans     &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_REDO   &kp RET   &kp N1 &kp N2 &kp N3 &kp PLUS
+									 &trans     &trans      &trans       &trans    &kp N0 &kp DOT
 			>;
 		};
 
-		// -----------------------------------------------------------------
-		// |  1  |  2  |  3  |  4  |  5  |---|  6  |  7  |  8  |  9  |  0  |
-		// |Meta1|Meta2|Meta3|Meta4|Meta5|---|  "  |RShft|RCtrl| RAlt| RGui|
-		// |Meta6|Meta7|Meta8|Meta9|Meta0|---|  '  |     |     |     |     |
-		//             | Bksp| Del | Trns|---|xxxxx|     |     |
+		// # -----------------------------------------------------------------
+		// # |  1  |  2  |  3  |  4  |  5  |---|  6  |  7  |  8  |  9  |  0  |
+		// # |Meta1|Meta2|Meta3|Meta4|Meta5|---|  "  |RShft|RCtrl| RAlt| RGui|
+		// # |Meta6|Meta7|Meta8|Meta9|Meta0|---|  '  |     |     |     |     |
+		// #             | Bksp| Del | Trns|---|xxxxx|     |     |
 		number_layer {
 			label = "Number";
 			bindings = <
@@ -159,11 +159,11 @@
 			>;
 		};
 
-		// -----------------------------------------------------------------
-		// |     |     |     |     |     |---|     |     |ViCmd|     |     |
-		// | F1  | F2  | F3  | F4  | F5  |---|     |RShft|RCtrl| RAlt| RGui|
-		// | F6  | F7  | F8  | F9  | F10 |---|     |     |     |     |     |
-		//             |     | F11 | F12 |---|     |xxxxx|     |
+		// # -----------------------------------------------------------------
+		// # |     |     |     |     |     |---|     |     |ViCmd|     |     |
+		// # | F1  | F2  | F3  | F4  | F5  |---|     |RShft|RCtrl| RAlt| RGui|
+		// # | F6  | F7  | F8  | F9  | F10 |---|     |     |     |     |     |
+		// #             |     | F11 | F12 |---|     |xxxxx|     |
 		function_layer {
 			label = "Fn";
 			bindings = <
@@ -174,11 +174,11 @@
 			>;
 		};
 
-		// -----------------------------------------------------------------
-		// |BTClr|     |     |     |     |---|     |     |     |     |     |
-		// | BT0 | BT1 | BT2 | BT3 | BT4 |---|     |RShft|RCtrl| RAlt| RGui|
-		// |     |     |     |     |     |---|     |     |     |     |     |
-		//             |     |     |     |---|     |     |xxxxx|
+		// # -----------------------------------------------------------------
+		// # |BTClr|     |     |     |     |---|     |     |     |     |     |
+		// # | BT0 | BT1 | BT2 | BT3 | BT4 |---|     |RShft|RCtrl| RAlt| RGui|
+		// # |     |     |     |     |     |---|     |     |     |     |     |
+		// #             |     |     |     |---|     |     |xxxxx|
 		config_layer {
 			label = "Config";
 			bindings = <
@@ -189,20 +189,20 @@
 			>;
 		};
 
-		// -----------------------------------------------------------------
-		// |Undo | Cut |Copy |Paste|Redo |---| Redo|Paste| Copy| Cut | Undo|
-		// |LGui |RAlt |LCtrl|LShft|     |---|     |RShft|RCtrl| RAlt| RGui|
-		// |Undo | Cut |Copy |Paste|Redo |---| Redo|Paste| Copy| Cut |xxxxx|
-		//             |MseM |MseR |MseL |---| MseL| MseR| MseM|
+		// # -----------------------------------------------------------------
+		// # |Undo | Cut |Copy |Paste|Redo |---| Redo|Paste| Copy| Cut | Undo|
+		// # |LGui |RAlt |LCtrl|LShft|     |---|     |RShft|RCtrl| RAlt| RGui|
+		// # |Undo | Cut |Copy |Paste|Redo |---| Redo|Paste| Copy| Cut |xxxxx|
+		// #             |MseM |MseR |MseL |---| MseL| MseR| MseM|
 		// Holding this here when mouse emulation is merged: https://github.com/zmkfirmware/zmk/pull/778
 		//						           &mkp MCLK     &mkp RCLK      &mkp LCLK       &mkp LCLK     &mkp RCLK      &mkp MCLK
 		button_right_layer {
 			label = "Button";
 			bindings = <
-				&kp C_AC_UNDO &kp C_AC_CUT &kp C_AC_COPY &kp C_AC_PASTE &kp C_AC_REDO   &kp C_AC_REDO &kp C_AC_PASTE &kp C_AC_COPY &kp C_AC_CUT &kp C_AC_UNDO
-				&kp LGUI      &kp LALT     &kp LCTRL     &kp LSHIFT     &trans          &trans        &kp RSHIFT     &kp RCTRL     &kp RALT     &kp RGUI
-				&kp C_AC_UNDO &kp C_AC_CUT &kp C_AC_COPY &kp C_AC_PASTE &kp C_AC_REDO   &kp C_AC_REDO &kp C_AC_PASTE &kp C_AC_COPY &kp C_AC_CUT &trans
-								           &trans        &trans         &trans          &trans        &trans         &trans
+				&kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_REDO   &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO
+				&kp LGUI   &kp LALT  &kp LCTRL  &kp LSHIFT  &trans       &trans     &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RGUI
+				&kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_REDO   &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &trans
+								     &trans     &trans      &trans       &trans     &trans      &trans
 			>;
 		};
 	};
