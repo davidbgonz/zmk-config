@@ -65,17 +65,17 @@
 		compatible = "zmk,keymap";
 
 		// # ------------------------------------------------------------------
-		// # |  Q  |  W  |  F  |  P  |  B  |---|  J  |  L   |  U  |  Y  |  ;  |
-		// # |  A  |  R  |  S  |  T  |  G  |---|  M  |  N   |  E  |  I  |  O  |
-		// # |  Z  |  X  |  C  |  D  |  V  |---|  K  |  H   |  ,  |  .  |  /  |
-		// #             |  '  | Bksp| Tab |---| Spc | Ent  | Esc |
+		// # |  Q  |  W  |  F  |  P  |  B  |---|  J  |  L  |  U  |  Y  |  ;  |
+		// # |  A  |  R  |  S  |  T  |  G  |---|  M  |  N  |  E  |  I  |  O  |
+		// # |  Z  |  X  |  C  |  D  |  V  |---|  K  |  H  |  ,  |  .  |  /  |
+		// #             |  '  | Bksp| Tab |---| Ent | Spc | Esc |
 		default_layer {
 			label = "Base";
 			bindings = <
-				&kp Q       &kp W       &kp F         &kp P         &kp B         &kp J         &kp L         &kp U        &kp Y       &kp SEMI
-				&bhm LGUI A &bhm LALT R &bhm LCTRL S  &bhm LSHIFT T &kp G         &kp M         &bhm RSHIFT N &bhm RCTRL E &bhm RALT I &bhm RGUI O
-				&lt BTN_L Z &kp X       &kp C         &kp D         &kp V         &kp K         &kp H         &kp COMMA    &kp DOT     &lt BTN_R FSLH
-            					        &lt MEDIA SQT &lt NAV BSPC  &lt SYM TAB   &lt NUM SPACE &lt FUNC RET  &lt CFG ESC
+				&kp Q       &kp W       &kp F         &kp P         &kp B         &kp J       &kp L          &kp U        &kp Y       &kp SEMI
+				&bhm LGUI A &bhm LALT R &bhm LCTRL S  &bhm LSHIFT T &kp G         &kp M       &bhm RSHIFT N  &bhm RCTRL E &bhm RALT I &bhm RGUI O
+				&lt BTN_L Z &kp X       &kp C         &kp D         &kp V         &kp K       &kp H          &kp COMMA    &kp DOT     &lt BTN_R FSLH
+            					        &lt MEDIA SQT &lt NAV BSPC  &lt SYM TAB   &lt NUM RET &lt FUNC SPACE &lt CFG ESC
             >;
     	};
 
@@ -98,17 +98,17 @@
 		// # |MScD |MseM |MseR |MseL |MScU |---|Scrlk| MScL| MScD| MScU| MScR|
 		// # |LGui |LAlt |LCtrl|LShft|NewTb|---| Caps| Lft | Dwn |  Up | Rgt |
 		// # |     | Ent |CtShC|CtShV|     |---|Insrt| Home| PgDn| PgUp| End |
-		// #             |     |xxxxx|     |---| Trns| Bksp| Del |
+		// #             |     |xxxxx|     |---| Bksp| Spc | Del |
 		// Holding this here when mouse emulation is merged: https://github.com/zmkfirmware/zmk/pull/778
 		//		&mwh SCROLL_DOWN &mkp MCLK &mkp RCLK     &mkp LCLK     &mwh SCROLL_UP   &kp SLCK &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP &mwh SCROLL_RIGHT
 		// Don't forget to add back &new_tab where NewTb
 		nav_layer {
 			label = "Nav";
 			bindings = <
-				&trans           &trans    &trans        &trans        &trans           &kp SLCK &trans           &trans           &trans         &trans
-				&kp LGUI         &kp LALT  &kp LCTRL     &kp LSHIFT    &trans           &kp CAPS &kp LEFT         &kp DOWN         &kp UP         &kp RIGHT
-				&trans           &kp RET   &kp LC(LS(C)) &kp LC(LS(V)) &trans           &kp INS  &kp HOME         &kp PG_DN        &kp PG_UP      &kp END
-                    	                   &trans        &trans        &trans           &trans   &kp BSPC         &kp DEL
+				&trans           &trans    &trans        &trans        &trans           &kp SLCK     &trans           &trans           &trans         &trans
+				&kp LGUI         &kp LALT  &kp LCTRL     &kp LSHIFT    &trans           &kp CAPS     &kp LEFT         &kp DOWN         &kp UP         &kp RIGHT
+				&trans           &kp RET   &kp LC(LS(C)) &kp LC(LS(V)) &trans           &kp INS      &kp HOME         &kp PG_DN        &kp PG_UP      &kp END
+                    	                   &trans        &trans        &trans           &lp NUM BSPC &trans           &lt CFG DEL
             >;
         };
 
@@ -116,14 +116,14 @@
 		// # |  !  |  @  |  #  |  $  |  %  |---|  ^  |  &  |  *  |  (  |  )  |
 		// # |LGui |LAlt |LCtrl|LShft|  |  |---|  "  |  -  |  =  |  [  |  ]  |
 		// # |     |     |     |     |  ~  |---|  '  |  _  |  +  |  {  |  }  |
-		// #             |     |     |xxxxx|---| Trns|  `  |  \  |
+		// #             |     |     |xxxxx|---|  `  | Spc |  \  |
 		symbol_layer {
 			label = "Symbol";
 			bindings = <
-				&kp EXCL &kp AT   &kp POUND &kp DLLR   &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR
-				&kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp PIPE    &kp DQT   &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT
-				&trans   &trans   &trans    &trans     &kp TILDE   &kp SQT   &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC
-                    	          &trans    &trans     &trans      &trans    &kp GRAVE &kp BSLH
+				&kp EXCL &kp AT   &kp POUND &kp DLLR   &kp PRCNT   &kp CARET     &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR
+				&kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp PIPE    &kp DQT       &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT
+				&trans   &trans   &trans    &trans     &kp TILDE   &kp SQT       &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC
+                    	          &trans    &trans     &trans      &lt NUM GRAVE &trans    &kp BSLH
             >;
         };
 
@@ -131,16 +131,16 @@
 		// # |Undo | Cut |Copy |Paste|Redo |---|  *  |  7  |  8  |  9  |  /  |
 		// # |LGui |RAlt |LCtrl|LShft|NumLk|---|  =  |  4  |  5  |  6  |  -  |
 		// # |xxxxx| Cut |Copy |Paste|Redo |---| Ent |  1  |  2  |  3  |  +  |
-		// #             |MseM |MseR |MseL |---| Trns|  0  |  .  |
+		// #             |MseM |MseR |MseL |---| Spc |  0  |  .  |
 		// Holding this here when mouse emulation is merged: https://github.com/zmkfirmware/zmk/pull/778
-		//						           &mkp MCLK     &mkp RCLK      &mkp LCLK       &trans    &kp N0 &kp DOT
+		//						           &mkp MCLK     &mkp RCLK      &mkp LCLK       &kp SPACE &kp N0 &kp DOT
 		button_left_layer {
 			label = "Button";
 			bindings = <
 				&kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_REDO   &kp ASTRK &kp N7 &kp N8 &kp N9 &kp FSLH
 				&kp LGUI   &kp LALT  &kp LCTRL  &kp LSHIFT  &kp KP_NUM   &kp EQUAL &kp N4 &kp N5 &kp N6 &kp MINUS
 				&trans     &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_REDO   &kp RET   &kp N1 &kp N2 &kp N3 &kp PLUS
-									 &trans     &trans      &trans       &trans    &kp N0 &kp DOT
+									 &trans     &trans      &trans       &kp SPACE &kp N0 &kp DOT
 			>;
 		};
 
@@ -152,10 +152,10 @@
 		number_layer {
 			label = "Number";
 			bindings = <
-				&kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6  &kp N7     &kp N8    &kp N9   &kp N0
-				&kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)   &kp DQT &kp RSHIFT &kp RCTRL &kp RALT &kp RGUI
-				&kp LG(N6) &kp LG(N7) &kp LG(N8) &kp LG(N9) &kp LG(N0)   &kp SQT &trans     &trans    &trans   &trans
-								      &kp BSPC   &kp DEL    &trans       &trans  &trans     &trans
+				&kp N1     &kp N2     &kp N3     &kp N4      &kp N5       &kp N6  &kp N7     &kp N8    &kp N9   &kp N0
+				&kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4)  &kp LG(N5)   &kp DQT &kp RSHIFT &kp RCTRL &kp RALT &kp RGUI
+				&kp LG(N6) &kp LG(N7) &kp LG(N8) &kp LG(N9)  &kp LG(N0)   &kp SQT &trans     &trans    &trans   &trans
+								      &kp BSPC   &lt NAV DEL &trans       &trans  &trans     &trans
 			>;
 		};
 
