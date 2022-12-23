@@ -47,15 +47,15 @@
 		// 		= <&macro_press &kp LCTRL &kp LSHIFT>
 		// 		, <&macro_tap &mkp LCLK>
 		// 		, <&macro_release &kp LSHIFT &kp LCTRL>;
-		// }
+		// };
 		vi_cmd: vi_cmd {
 			compatible = "zmk,behavior-macro";
 			label = "vi_esc_to_cmd";
 			#binding-cells = <0>;
 			bindings
 				= <&kp ESC &kp COLON>;
-		}
-	}
+		};
+	};
 
 	// &mwh {
 	// 	acceleration-exponent=<1>;
