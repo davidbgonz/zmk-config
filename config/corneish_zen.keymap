@@ -108,7 +108,7 @@
 				&trans           &trans    &trans        &trans        &trans           &kp SLCK     &trans           &trans           &trans         &trans
 				&kp LGUI         &kp LALT  &kp LCTRL     &kp LSHIFT    &trans           &kp CAPS     &kp LEFT         &kp DOWN         &kp UP         &kp RIGHT
 				&trans           &kp RET   &kp LC(LS(C)) &kp LC(LS(V)) &trans           &kp INS      &kp HOME         &kp PG_DN        &kp PG_UP      &kp END
-                    	                   &trans        &trans        &trans           &lp NUM BSPC &trans           &lt CFG DEL
+                    	                   &trans        &trans        &trans           &lt NUM BSPC &trans           &lt CFG DEL
             >;
         };
 
