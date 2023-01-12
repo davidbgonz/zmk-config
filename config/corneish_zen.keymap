@@ -25,6 +25,14 @@
 #define CFG   7
 #define BTN_R 8
 
+&lt {
+	tapping-term-ms = <150>;
+};
+
+// &mwh {
+// 	acceleration-exponent=<1>;
+// };
+
 / {
 	behaviors {
 		bhm: balanced_homerow_mods {
@@ -36,10 +44,6 @@
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
 		};
-	};
-
-	&lt {
-		tapping-term-ms = <150>;
 	};
 
 	macros {
@@ -60,10 +64,6 @@
 				= <&kp ESC &kp COLON>;
 		};
 	};
-
-	// &mwh {
-	// 	acceleration-exponent=<1>;
-	// };
 
 	keymap {
 		compatible = "zmk,keymap";
