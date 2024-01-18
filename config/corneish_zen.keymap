@@ -100,16 +100,16 @@
 
 		// # -----------------------------------------------------------------
 		// # |  !  |  @  |  #  |  $  |  %  |---|  ^  |  &  |  *  |  (  |  )  |
-		// # |LGui |LAlt |LCtrl|LShft|  |  |---|  "  |  -  |  =  |  [  |  ]  |
-		// # |     |     |     |     |  ~  |---|  '  |  _  |  +  |  {  |  }  |
+		// # |LGui |LAlt |LCtrl|LShft|     |---|  "  |  -  |  =  |  [  |  ]  |
+		// # |  ~  |  |  |     |     |     |---|  '  |  _  |  +  |  {  |  }  |
 		// #             |     |xxxxx|     |---|  `  | Spc |  \  |
 		symbol_layer {
 			label = "Symbol";
 			bindings = <
-				&kp EXCL &kp AT   &kp POUND &kp DLLR   &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR
-				&kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp PIPE    &kp DQT   &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT
-				&trans   &trans   &trans    &trans     &kp TILDE   &kp SQT   &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC
-                    	          &trans    &trans     &trans      &kp GRAVE &kp SPACE &kp BSLH
+				&kp EXCL  &kp AT   &kp POUND &kp DLLR   &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR
+				&kp LGUI  &kp LALT &kp LCTRL &kp LSHIFT &trans      &kp DQT   &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT
+				&kp TILDE &kp PIPE &trans    &trans     &trans      &kp SQT   &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC
+                    	     &trans    &trans     &trans      &kp GRAVE &kp SPACE &kp BSLH
             >;
         };
 
