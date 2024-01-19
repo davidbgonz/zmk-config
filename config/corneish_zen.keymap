@@ -53,6 +53,7 @@
 			#binding-cells = <0>;
 			bindings
 				= <&macro_press &kp LCTRL &kp LSHIFT>
+				, <&macro_wait_time 50>
 				, <&macro_tap &mkp LCLK>
 				, <&macro_release &kp LSHIFT &kp LCTRL>;
 		};
